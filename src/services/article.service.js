@@ -1,8 +1,7 @@
 const rapidApiKey = import.meta.env.VITE_RAPID_API_ARTICLE_KEY;
 
-// Function to get article summary using fetch
-export const getArticleSummary = async (articleUrl) => {
 
+export const getArticleSummary = async (articleUrl) => {
   const headers = new Headers();
   headers.append("X-RapidAPI-Key", rapidApiKey);
   headers.append(
@@ -27,7 +26,6 @@ export const getArticleSummary = async (articleUrl) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    alert("Error fetching article summary");
-    throw error;
+       throw error;
   }
 };
